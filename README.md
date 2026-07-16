@@ -38,3 +38,4 @@ terraform apply
 ## Related Project
 Deployed application (Spring Boot + React, Dockerized, Kubernetes manifests):
 [spring-react-docker-kubernetes](https://github.com/RASHMIBB23/spring-react-docker-kubernetes)
+this is terraform project
