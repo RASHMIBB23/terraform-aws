@@ -1,17 +1,10 @@
 pipeline {
   agent any
-
   environment {
     AWS_ACCESS_KEY_ID     = credentials('aws-access-key')
     AWS_SECRET_ACCESS_KEY = credentials('aws-secret-key')
   }
-
   stages {
-    stage('Checkout') {
-      steps {
-        git branch: 'main', url: 'https://github.com/RASHMIBB23/terraform-aws.git'
-      }
-    }
     stage('Terraform Init') {
       steps {
         dir('environments/dev') {
