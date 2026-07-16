@@ -1,3 +1,5 @@
+cd ~/terraform/terraform-aws-infra
+cat > Jenkinsfile << 'EOF'
 pipeline {
   agent any
 
@@ -7,11 +9,6 @@ pipeline {
   }
 
   stages {
-    stage('Checkout') {
-      steps {
-        git branch: 'main', url: 'https://github.com/RASHMIBB23/terraform-aws-infra.git'
-      }
-    }
     stage('Terraform Init') {
       steps {
         dir('environments/dev') {
@@ -40,3 +37,4 @@ pipeline {
     }
   }
 }
+EOF
