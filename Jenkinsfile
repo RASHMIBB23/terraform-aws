@@ -1,5 +1,4 @@
-cd ~/terraform/terraform-aws-infra
-cat > Jenkinsfile << 'EOF'
+
 pipeline {
   agent any
 
@@ -37,4 +36,4 @@ pipeline {
     }
   }
 }
-EOF
+
