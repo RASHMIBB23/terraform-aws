@@ -35,3 +35,13 @@ module "alb" {
   public_subnet_ids = module.vpc.public_subnet_ids
   instance_ids      = module.ec2.instance_ids
 }
+
+module "rds" {
+  source = "../../modules/rds"
+
+  project_name       = var.project_name
+  vpc_id             = module.vpc.vpc_id
+  private_subnet_ids = module.vpc.private_subnet_ids
+  ec2_sg_id          = module.ec2.security_group_id
+  db_password        = var.db_password
+}

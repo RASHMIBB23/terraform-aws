@@ -29,3 +29,8 @@ variable "instance_type" {
 variable "instance_count" {
   default = 2
 }
+
+variable "db_password" {
+  type      = string
+  sensitive = true
+}
